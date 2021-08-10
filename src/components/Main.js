@@ -1,9 +1,17 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
-import hornsData from './hornsData.json'
+import hornsData from './hornsData.json';
 import './Main.css';
-
 class Main extends React.Component {
+
+
+
+
+
+
+   
+
+
 render () {
 return (
 
@@ -27,4 +35,7 @@ description={item.description} />
 )
 }
 }
+
+
+
 export default Main;
