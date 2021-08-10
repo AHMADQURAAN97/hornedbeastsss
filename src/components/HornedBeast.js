@@ -25,19 +25,26 @@ class HornedBeast extends React.Component {
     }
 
 
-    render () {
+    horne = ()=> {
+
+      this.props.horne(this.props.title);
+    };
+
+
+    render() {
     return (
     <>
 
 <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" onClick={this.increaseNumOfFav} src={this.props.imgUrl} alt="hornedBeast" title="hornedBeast" />
-  <Card.Body>
+  <Card.Img variant="top" onClick={this.horne}  src={this.props.imgUrl} alt="hornedBeast" title="hornedBeast" />
+  <Card.Body onClick={this.horne} >
     <Card.Title>{this.props.title}</Card.Title>
    
-    <Button variant="primary">❤ Favorite {this.state.favorite}</Button>
+    <Button variant="primary" onClick={this.increaseNumOfFav} >❤ Favorite {this.state.favorite}</Button>
     <Card.Text>
     {this.props.description}
     </Card.Text>
+
   </Card.Body>
 </Card>
 
