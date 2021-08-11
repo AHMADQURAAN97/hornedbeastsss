@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-pascal-case */
+
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
@@ -25,9 +27,9 @@ class HornedBeast extends React.Component {
     }
 
 
-    horne = ()=> {
+    showModal= ()=> {
 
-      this.props.horne(this.props.title);
+      this.props.showModal(this.props.title);
     };
 
 
@@ -36,8 +38,8 @@ class HornedBeast extends React.Component {
     <>
 
 <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" onClick={this.horne}  src={this.props.imgUrl} alt="hornedBeast" title="hornedBeast" />
-  <Card.Body onClick={this.horne} >
+  <Card.Img variant="top" onClick={this.showModal}  src={this.props.imgUrl} alt="hornedBeast" title="hornedBeast" />
+  <Card.Body onClick={this.showModal} >
     <Card.Title>{this.props.title}</Card.Title>
    
     <Button variant="primary" onClick={this.increaseNumOfFav} >❤ Favorite {this.state.favorite}</Button>

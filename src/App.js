@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+
 import React from 'react';
 import './App.css';
 import Footer from './components/Footer';
@@ -18,18 +20,18 @@ class App extends React.Component {
   }
 
 
-horne = title => {
-let horeedBeast = hornsData.find(i => {
+  showModal = (title) => {
+let elements = hornsData.find(element => {
 
-if (i.title === title){
-return i;
+if (element.title === title){
+return element;
 }
 });
 
 
 this.setState ({
 show:true,
-beastItem:horeedBeast
+beastItem:elements
 })
 };
 
@@ -49,7 +51,7 @@ handleClose = () => {
     <div>
 
     <Header/>
-    <Main horne={this.horne} />
+    <Main showModal={this.showModal} />
     <SelectedBeast show={this.state.show} handleClose={this.handleClose} beastItem={this.state.beastItem} />
     <Footer/>
    
