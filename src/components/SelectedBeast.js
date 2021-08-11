@@ -3,6 +3,10 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+
+
+
+
 class SelectedBeast extends React.Component {
     render () {
   return (
@@ -14,9 +18,10 @@ class SelectedBeast extends React.Component {
         <Modal.Header>
           <Modal.Title>{this.props.beastItem.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body><Card.Img variant="top"  src={this.props.beastItem.imgUrl} alt="hornedBeast" title="hornedBeast" /></Modal.Body>
+        <Modal.Body><Card.Img variant="top"  src={this.props.beastItem.image_url} alt="hornedBeast" title="hornedBeast" /></Modal.Body>
+           <Modal.Title>{this.props.beastItem.description}</Modal.Title>
         <Modal.Footer>
-          <Modal.text>{this.props.beastItem.description}</Modal.text>
+            
           <Button variant="primary" onClick={this.props.handleClose}>
         Close
       </Button>

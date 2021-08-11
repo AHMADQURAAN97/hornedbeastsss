@@ -1,15 +1,12 @@
+/* eslint-disable react/jsx-pascal-case */
+
 import React from 'react';
 import HornedBeast from './HornedBeast';
 import hornsData from './hornsData.json';
 import './Main.css';
+
+
 class Main extends React.Component {
-
-
-
-
-
-
-   
 
 
 render () {
@@ -26,7 +23,8 @@ return (
 key={index}
 title={item.title}
 imgUrl={item.image_url}
-description={item.description} />
+description={item.description} 
+showModal={this.props.showModal} />
 
 )
 })}
